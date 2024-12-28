@@ -15,6 +15,8 @@ builder.Services.AddDbContext<DataContext>(
     }
 );
 
+// them CORS
+builder.Services.AddCors();
 
 
 // chua dung den 
@@ -22,9 +24,9 @@ builder.Services.AddDbContext<DataContext>(
 // builder.Services.AddEndpointsApiExplorer();
 // builder.Services.AddSwaggerGen();
 
+
+
 var app = builder.Build();
-
-
 
 // chua dung den 
 // Configure the HTTP request pipeline.
@@ -35,6 +37,8 @@ var app = builder.Build();
 // }
 // app.UseHttpsRedirection();
 // app.UseAuthorization();
+
+app.UseCors(x => x.AllowAnyHeader().AllowAnyMethod().WithOrigins("http://localhost:4200", "https://localhost:4200"));
 
 app.MapControllers();
 

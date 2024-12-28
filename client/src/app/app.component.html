@@ -1,0 +1,18 @@
+<h1>Atrung toi choi   +++  {{title}}</h1>
+<!-- <router-outlet /> -->
+
+
+<ul>
+    <!-- <li *ngFor="let user of users" >
+        {{user.id}} - {{user.userName}}
+    </li> -->
+
+    <!-- cach nay pho bien hon, moi hon  -->
+    <!-- users chinh la response da duoc khai bao o .ts -->
+    @for (user of users; track user.id) {
+        <li>
+            <!-- o day voi cac bien id , user phai nhan dung cac key camelCase o json tra ve -->
+            {{user.id}} - {{user.userName}}
+        </li>
+    }
+</ul>
