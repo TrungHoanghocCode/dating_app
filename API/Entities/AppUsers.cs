@@ -7,4 +7,8 @@ public class AppUsers
     public int Id { get; set; }
     // public string UserName { get; set; } = "";                     // "" la value mac dinh 
     public required string UserName { get; set; }               // them required de chac chan user co nhap ten
+
+    public required byte[] HashPassWord { get; set; }               // them required de chac chan user co nhap ten
+    public required byte[] SaltPassWord { get; set; }               // them required de chac chan user co nhap ten
+
 }
