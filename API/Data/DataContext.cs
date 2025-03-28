@@ -19,4 +19,6 @@ public class DataContext(DbContextOptions options) : DbContext(options)
     // Kieu du lieu AppUsers da duoc dinh nghia truoc : ID + UserName
 
     public DbSet<AppUsers>? Users { get; set; }
+    // public DbSet<AppBrands>? Brands { get; set; }
+    // SELF
 }

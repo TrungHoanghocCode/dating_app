@@ -1,4 +1,6 @@
+using API.Entities;
 using API.Extensions;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,6 +15,7 @@ var builder = WebApplication.CreateBuilder(args);
 //         options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection"));
 //     }
 // );
+
 
 // // them CORS
 // builder.Services.AddCors();

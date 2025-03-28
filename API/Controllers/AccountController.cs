@@ -36,7 +36,7 @@ public class AccountController(DataContext context, ITokenService tokenService) 
             UserName = registerDTO.UserName.ToLower(),
             // Hash => bam pass
             HashPassWord = hmac.ComputeHash(Encoding.UTF8.GetBytes(registerDTO.PassWord)),
-            // Slat => tron them de tat ca cac pass deu co hash khac nhau 
+            // luu key salt
             SaltPassWord = hmac.Key
         };
 

@@ -13,6 +13,7 @@ namespace API.Controllers;
 // // them route : co nghia la khi truy cap den path nay thi dan thang den class
 // // /api/users
 // [Route("api/[controller]")]
+// logic nay da duoc baseAPI tiep quan 
 
 public class UsersController(DataContext context) : BaseApiController
 {
